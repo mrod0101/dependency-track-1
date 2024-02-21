@@ -253,7 +253,7 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-compress</artifactId>
-            <version>1.21</version>
+            <version>1.26.0</version>
         </dependency>
         <!-- Test Dependencies -->
         <dependency>
@@ -420,9 +420,7 @@
                                 <phase>prepare-package</phase>
                                 <configuration>
                                     <target>
-                                        <get src="https://github.com/DependencyTrack/frontend/releases/download/${frontend.version}/frontend-dist.zip"
-                                             dest="${project.build.directory}"
-                                             verbose="true"/>
+                                        <get src="https://github.com/DependencyTrack/frontend/releases/download/${frontend.version}/frontend-dist.zip" dest="${project.build.directory}" verbose="true"/>
                                     </target>
                                 </configuration>
                                 <goals>
@@ -434,8 +432,7 @@
                                 <phase>prepare-package</phase>
                                 <configuration>
                                     <target>
-                                        <unzip src="${project.build.directory}/frontend-dist.zip"
-                                               dest="${project.build.directory}/frontend">
+                                        <unzip src="${project.build.directory}/frontend-dist.zip" dest="${project.build.directory}/frontend">
                                         </unzip>
                                     </target>
                                 </configuration>
